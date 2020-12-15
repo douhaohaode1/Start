@@ -28,7 +28,10 @@ class StartUITests: XCTestCase {
     }
     
     
-    func example(app :XCUIApplication){
+    
+    func testExample() throws {
+        // UI tests must launch the application that they test.
+        app = XCUIApplication()
         
         app.launch()
         
@@ -108,23 +111,9 @@ class StartUITests: XCTestCase {
         //Kill the App
         app.terminate()
         app.launch()
-        app.buttons["jumpOver"].tap()
+        app.buttons["jumpOver3"].tap()
         sleep(3)
         app.terminate()
-        
-    }
-    
-    
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        app = XCUIApplication()
-        
-       // for _ in 0..<2{
-            example(app: app)
-       // }
-        
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testLaunchPerformance() throws {
