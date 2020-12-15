@@ -17,3 +17,4 @@ Start = "開始";
 Stop = "暂枝";
 Unsolvedcase = "继续";
 Cohesion = "結";
+jumpOver = "パス";

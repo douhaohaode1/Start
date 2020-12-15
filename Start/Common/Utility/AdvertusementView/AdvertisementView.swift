@@ -42,7 +42,7 @@ public class AdvertisementView: UIView {
         btn.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.4)
         btn.layer.cornerRadius = 5.0
         btn.layer.masksToBounds = true
-        btn.setTitle("跳过广告", for: UIControl.State.normal)
+        btn.setTitle(NSLocalizedString("jumpOver", comment: ""), for: UIControl.State.normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         btn.titleLabel?.textColor = UIColor.white
         btn.titleLabel?.sizeToFit()
@@ -109,7 +109,10 @@ public class AdvertisementView: UIView {
 
         skipButton.frame = CGRect(x: UIScreen.main.bounds.size.width - 90.0 , y: 40.0, width: 70.0, height: 26.0)
         let adDuration = self.duration > 0 ? self.duration : 3
-        skipButton.setTitle("跳过广告\(adDuration)", for: UIControl.State.normal)
+        
+        
+        
+        skipButton.setTitle(NSLocalizedString("jumpOver", comment: "") + String(format: "%ld",adDuration), for: UIControl.State.normal)
         self.addSubview(skipButton)
 
         // "跳过广告"按钮定时器
@@ -118,7 +121,8 @@ public class AdvertisementView: UIView {
         self.duration = self.duration > 0 ? self.duration : 3
         skipBtnTimer?.setEventHandler(handler: { [weak self] in
             DispatchQueue.main.async {
-                let title = "跳过广告\(self?.duration ?? 0)"
+               // let title = "跳过广告\(self?.duration ?? 0)"
+                let title = NSLocalizedString("jumpOver", comment: "") + String(format: "%ld",adDuration)
                 let strTitle: NSMutableAttributedString = NSMutableAttributedString(string: title)
                 strTitle.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 14), range: NSRange(location: 4, length: title.count - 4))
                 self?.skipButton.setAttributedTitle(strTitle, for: UIControl.State.normal)

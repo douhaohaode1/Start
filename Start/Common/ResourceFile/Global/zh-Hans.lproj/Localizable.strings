@@ -17,3 +17,4 @@ Start = "开始";
 Stop = "结束";
 UnsolvedCase = "继续";
 Cohesion = "结束";
+jumpOver = "跳过";

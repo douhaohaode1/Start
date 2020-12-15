@@ -39,7 +39,9 @@ public class GuidePageView: UIView {
         btn.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.4)
         btn.layer.cornerRadius = 5.0
         btn.layer.masksToBounds = true
-        btn.setTitle("跳 过", for: .normal)
+        
+        
+        btn.setTitle(NSLocalizedString("jumpOver", comment: ""), for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.titleLabel?.sizeToFit()

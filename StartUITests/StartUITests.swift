@@ -33,10 +33,10 @@ class StartUITests: XCTestCase {
         app.launch()
         
         /// 该元素是否存在 存在 代表 第一次启动
-        if app.buttons["跳 过"].exists {
-            app.buttons["跳 过"].tap()
+        if app.buttons["jumpOver"].exists {
+            app.buttons["jumpOver"].tap()
         }else{
-            app.buttons["跳过广告3"].tap()
+            app.buttons["jumpOver3"].tap()
         }
         for _ in 0..<5{
             app.buttons["Order"].tap()
@@ -108,7 +108,7 @@ class StartUITests: XCTestCase {
         //Kill the App
         app.terminate()
         app.launch()
-        app.buttons["跳过广告3"].tap()
+        app.buttons["jumpOver"].tap()
         sleep(3)
         app.terminate()
         
@@ -119,9 +119,9 @@ class StartUITests: XCTestCase {
         // UI tests must launch the application that they test.
         app = XCUIApplication()
         
-        for _ in 0..<2{
+       // for _ in 0..<2{
             example(app: app)
-        }
+       // }
         
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
