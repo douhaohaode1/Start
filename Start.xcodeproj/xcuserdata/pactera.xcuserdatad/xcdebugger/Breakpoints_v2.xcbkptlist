@@ -5,26 +5,15 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            uuid = "CAEFA748-9EAD-4CA0-9C2C-36442D17ADDB"
+            uuid = "CBD5FE66-A9EB-409A-A630-A6E94A8A8083"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            symbolName = "UIColorBreakForOutOfRangeColorComponents"
-            moduleName = "">
-            <Locations>
-               <Location
-                  uuid = "CAEFA748-9EAD-4CA0-9C2C-36442D17ADDB - f26c3364c30b7088"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "UIColorBreakForOutOfRangeColorComponents"
-                  moduleName = "UIKitCore"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

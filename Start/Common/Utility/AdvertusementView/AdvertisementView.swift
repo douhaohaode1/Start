@@ -122,9 +122,10 @@ public class AdvertisementView: UIView {
         skipBtnTimer?.setEventHandler(handler: { [weak self] in
             DispatchQueue.main.async {
                // let title = "跳过广告\(self?.duration ?? 0)"
-                let title = NSLocalizedString("jumpOver", comment: "") + String(format: "%ld",adDuration)
+                
+                let title = NSLocalizedString("jumpOver", comment: "") + String(format: "%ld",self?.duration ?? 0)
                 let strTitle: NSMutableAttributedString = NSMutableAttributedString(string: title)
-                strTitle.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 14), range: NSRange(location: 4, length: title.count - 4))
+//                strTitle.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 14), range: NSRange(location: 4, length: title.count - 4))
                 self?.skipButton.setAttributedTitle(strTitle, for: UIControl.State.normal)
                 self?.duration -= 1
                 if self?.duration ?? 0 < 0 {
