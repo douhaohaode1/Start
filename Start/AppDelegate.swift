@@ -12,6 +12,7 @@ import CoreData
 
 //import IQKeyboardManagerSwift
 //test test
+//这里 wangjian81
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
