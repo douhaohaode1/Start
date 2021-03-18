@@ -19,6 +19,8 @@ import CoreData
 
 //818181
 
+// developer---wangjian
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
